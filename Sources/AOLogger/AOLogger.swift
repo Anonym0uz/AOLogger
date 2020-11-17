@@ -32,7 +32,7 @@ public class Log {
         return components.isEmpty ? "" : components.last!
     }
     
-    class func e( _ object: Any,
+    public class func e( _ object: Any,
                   filename: String = #file,
                   line: Int = #line,
                   column: Int = #column,
@@ -41,7 +41,7 @@ public class Log {
         print("\(Date().toString()) \(LogEvent.e.rawValue)[\(sourceFileName(filePath: filename))]:\(line) \(funcName) -> \(object)")
     }
     
-    class func d( tag: Any = "",
+    public class func d( tag: Any = "",
                   _ object: Any,
                   filename: String = #file,
                   line: Int = #line,
@@ -50,7 +50,7 @@ public class Log {
         print("\(Date().toString()) \(LogEvent.d.rawValue)[\(sourceFileName(filePath: filename))]:\(line) \(funcName) [\(tag)] -> \(object)")
     }
     
-    class func i( tag: Any = "",
+    public class func i( tag: Any = "",
                   _ object: Any,
                   filename: String = #file,
                   line: Int = #line,
@@ -59,7 +59,7 @@ public class Log {
         print("\(Date().toString()) \(LogEvent.i.rawValue)[\(sourceFileName(filePath: filename))]:\(line) \(funcName) [\(tag)] -> \(object)")
     }
     
-    class func w( _ object: Any,
+    public class func w( _ object: Any,
                   filename: String = #file,
                   line: Int = #line,
                   column: Int = #column,
